@@ -246,10 +246,7 @@ Future downloadFile({
   // file header bytes to determine the mime type and extension.
   if (bytes != null && bytes.isNotEmpty) {
     // Grab the first 32 bytes of the file to determine the mime type
-    if (mimeType == null) {
-      final headerBytes = bytes.take(32).toList();
-      mimeType ??= mime.lookupMimeType(filename, headerBytes: headerBytes);
-    }
+    
   }
 
   MimeType mimeTypeObj =
